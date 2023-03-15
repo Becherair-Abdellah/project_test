@@ -1,0 +1,34 @@
+body{
+    font-family: monospace;
+    height: 100vh;
+    background: #2f353d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    display: inline-flex;
+}
+.box .text_dyn1{
+    color: white;
+    font-size: 25px;
+}
+.box .text_dyn1 span{
+    position: relative;
+}
+.box .text_dyn1 span::after{
+    content: '';
+    width:100%;
+    height:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 2px solid white;
+    background-color:  #2f353d;
+    animation: typing 5s steps(21) forwards;
+}
+@keyframes typing{
+    100%{
+        left: 100%;
+    }
+}

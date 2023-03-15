@@ -1,0 +1,273 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+/* start global ruls */
+ul{
+    text-decoration: none;
+    list-style: none;
+}
+img{
+    width:200px;
+    height: 200px;
+}
+/* end global ruls */
+/* start CSS */
+.post{
+    padding: 80px;
+    display: flex;
+    background-color: rgb(243, 187, 5);
+    
+}
+.post .container{
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    background-color: #f8f8f8;
+    align-items: center;
+    justify-content: center;
+}
+.post .container .group ul {
+    padding: 26px;
+    border-right: 1px solid #f1f1f1;
+    
+}
+.post .container .group ul h1 {
+    text-align: center;
+    color: #acacac;
+    font-family: sans-serif;
+    margin-bottom: 27px;
+   
+}
+.post .container .group ul h1 i {
+    margin-right: 20px;  
+}
+.post .container .group ul li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    transition: 0.1s;
+    padding: 5px;
+}
+.post .container .group ul li:hover{
+    background-color: #ececec;
+}
+.post .container .group ul li img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 23px -13px black;
+}
+.post .container .group ul li span{
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 40%;
+    top: 23px;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: sans-serif;
+   
+}
+/* start this post */
+.this_post{
+    padding: 28px 8px 0;
+    border: 1px solid gray;
+    margin: 0 18px;
+    border-radius: 5px;
+    background-color: #e8e8e8;
+}
+.this_post .user{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #525252;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+.this_post .user > img{
+    border-radius: 50%;
+    width: 74px;
+    height: 74px;
+    margin-left: 14px;
+}
+.this_post .mini-post{
+    font-size: 22px;
+    font-family: monospace;
+    line-height: 1.5;
+    letter-spacing: -1px;
+    text-align: center;
+    margin-top: 48px;
+    width: 100%;
+}
+.this_post .reaction{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 16px;
+    border-top: 1px solid gray;
+    padding: 10px 0;
+    width: 100%;
+}
+.this_post .reaction i{
+    font-size: 26px;
+    color: #a0a0a0; 
+}
+/* end this post */
+
+/* start frds */
+.post .container .Frds ul {
+    padding: 26px;
+    border-left: 1px solid #f1f1f1;
+    
+}
+.post .container .Frds ul h1 {
+    text-align: center;
+    color: #acacac;
+    font-family: sans-serif;
+    margin-bottom: 27px;
+   
+}
+.post .container .Frds ul h1 i {
+    margin-right: 20px;  
+}
+.post .container .Frds ul li{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    transition: 0.1s;
+    padding: 5px;
+}
+.post .container .Frds ul li:hover{
+    background-color: #ececec;
+}
+.post .container .Frds ul li img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 23px -13px black;
+}
+.post .container .Frds ul li span{
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 40%;
+    top: 23px;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: sans-serif;
+   
+}
+/* end frds */
+
+/* start design the chat */
+.chat{
+    width: 350px;
+    height: 374px;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0px 0px 6px 0px #c3c3c3;
+    margin-left: 235%;
+    visibility: hidden;
+}
+.chat.visible{
+    visibility: visible;
+}
+.chat::before{
+    content: 'x';
+    width: 23px;
+    height: 23px;
+    background-color: #fd0a13;
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    color: white;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.chat i{
+    color: #fd0a13;
+    font-size: 22px;
+}
+.chat .part_one{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 12px;
+    border-bottom: 1px solid #eeeeee;
+}
+.chat .part_one i{
+    font-size: 19px;
+    cursor: pointer;
+}
+.chat .part_one .person{ 
+    display: flex;
+    align-items: center;
+}
+.chat .part_one .img img{
+    width: 41px;
+    height: 38px;
+    border-radius: 50%;
+}
+.chat .part_one .name_user{
+    color: #3b3b3b;
+    font-size: 20px;
+    font-weight: bold;
+}
+.chat .part_one .img {
+    margin-right: 10px;
+}
+.chat .place_chat{
+    height: 272px;
+    width: 100%;
+    position: absolute;
+}
+.chat .part_two{
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    align-items: center;
+    position: absolute;
+    height: 43px;
+    bottom: 0;
+    border-top: 1px solid #e8e8e8;
+    padding: 0 4px;
+
+}
+.chat .part_two i{
+    cursor: pointer;
+}
+.chat .part_two .right_chat input{
+    border: none;
+    height: 29px;
+    border-radius: 6px;
+    padding: 0px 0 0 6px;
+    font-size: 14px;
+    outline: none;
+    caret-color: #fd0a13;
+    background-color: #dfdfdf;
+}
+.chat .part_two i.select{
+    position: absolute;
+    right: 37px;
+    top: 10px;
+}
+/* end design the chat*/
+/* End CSS */
