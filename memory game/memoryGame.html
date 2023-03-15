@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>memoryGame</title>
+    <!-- this file css -->
+    <link rel="stylesheet" href="css/memoryGame.css">
+    <!-- this file font awsome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- this a big div it contains the all code the memory game -->
+    <!-- to notes -->
+    <p class="p1">Hello player this is memory game developed by abdellah by use technology HTML,CSS,JS</p>
+    <!-- <p class="p2"><span>About Developer</span>Abdellah Becherair Student majoring in and computer science,computer science branch Programming lesson by self-learning,specializing in programming web </p> -->
+        <button id="skip">Skip</button>
+        <div class="GameOver">
+           <span id="Game_over"> Game Over</span>
+           <button id="try" >Try Agin</button>
+        </div>
+  <div class="memoryGame">
+      <div id="overlay" class="overlay_start_game">
+          <button id="start" >Start game</button>
+          <div class="input_name">
+              <h1>Hello Gamer</h1>
+              <div class="input">
+                <input type="text" placeholder="Enter your name" name="" id="this_name">
+                <a id="send" >Play</a>
+              </div>
+          </div>
+      </div>
+      <div class="container_Game">
+          <!-- this div barname -->
+          <div class="barName">
+              <!-- this name User -->
+              <h1>Hello : <span id="UserName"></span></h1>
+              <!-- this a time -->
+              <h1 ><span id="this_time">200</span>s</h1>
+              <!-- this a wrong -->
+              <h1>Level : <span id="wrong">1</span></h1>
+          </div>
+          <div class="box_Game">
+            <div class="block" id="python">
+                <div class="face back">
+                    <i class="fa-brands fa-python"></i>
+                 </div>
+                 <div class="face front">
+                 </div>
+         </div>
+        
+         <div class="block" id="python">
+            <div class="face back">
+                <i class="fa-brands fa-python"></i>
+             </div>
+             <div class="face front">
+                 
+             </div>
+        </div>
+        
+        <div class="block" id="vueJs">
+        <div class="face back">
+            <i class="fa-brands fa-vuejs"></i>
+         </div>
+         <div class="face front">
+             
+         </div>
+        </div>
+        <div class="block" id="vueJs">
+        <div class="face back">
+        <i class="fa-brands fa-vuejs"></i>
+        </div>
+        <div class="face front">
+         
+        </div>
+        </div>
+        <div class="block" id="angular">
+        <div class="face back">
+        <i class="fa-brands fa-angular"></i>    
+        </div>
+        <div class="face front">
+        
+        </div>
+        </div>
+        <div class="block" id="angular">
+        <div class="face back">
+        <i class="fa-brands fa-angular"></i>    
+        </div>
+        <div class="face front">
+        
+        </div>
+        </div>
+        <div class="block" id="java">
+        <div class="face back">
+        <i class="fa-brands fa-java"></i>
+        </div>
+        <div class="face front">
+        
+        </div>
+        </div>
+        <div class="block" id="java">
+        <div class="face back">
+        <i class="fa-brands fa-java"></i>
+        </div>
+        <div class="face front">
+        
+        </div>
+        </div>
+        <div class="block" id="react">
+        <div class="face back">
+        <i class="fa-brands fa-react"></i> 
+        </div>
+        <div class="face front">
+        
+        </div>
+        </div>
+        <div class="block" id="react">
+        <div class="face back">
+        <i class="fa-brands fa-react"></i> 
+        </div>
+        <div class="face front">
+        
+        </div>
+        </div>
+        <div class="block" id="rust">
+        <div class="face back">
+        <i class="fa-brands fa-rust"></i> 
+        </div>
+        <div class="face front">
+        
+        </div>
+        </div>
+        <div class="block"id="rust">
+        <div class="face back">
+        <i class="fa-brands fa-rust"></i> 
+        </div>
+        <div class="face front">
+        
+        </div>
+        </div>
+        <div class="block" id="golang">
+        <div class="face back">
+        <i class="fa-brands fa-golang"></i>  
+        </div>
+        <div class="face front">
+        
+        </div>
+        </div>
+        <div class="block" id="golang">
+        <div class="face back">
+        <i class="fa-brands fa-golang"></i>  
+        </div>
+        <div class="face front">
+        
+        </div>
+        </div>
+        <div class="block" id="css3">
+        <div class="face back">
+        <i class="fa-brands fa-css3"></i>
+        </div>
+        <div class="face front">
+        
+        </div>
+        </div>
+        <div class="block" id="css3">
+        <div class="face back">
+        <i class="fa-brands fa-css3"></i>
+        </div>
+        <div class="face front">
+        
+        </div>
+        </div>
+        <div class="block" id="html5">
+        <div class="face back">
+        <i class="fa-brands fa-html5"></i>
+        </div>
+        <div class="face front">
+        
+        </div>
+        </div>
+        <div class="block" id="html5">
+        <div class="face back">
+        <i class="fa-brands fa-html5"></i>
+        </div>
+        <div class="face front">
+        
+        </div>
+        </div>
+        <div class="block" id="c">
+        <div class="face back">
+        <i class="fa-solid fa-c"></i>
+        </div>
+        <div class="face front">
+        
+        </div>
+        </div>
+        <div class="block" id="c">
+        <div class="face back">
+        <i class="fa-solid fa-c"></i>
+        </div>
+        <div class="face front">
+        
+        </div>
+        </div>
+          </div>
+      </div>
+      
+  </div>
+  <audio id="error" src="sound/Melodic bonus collect(MP3_320K).mp3"></audio> <!--sound error -->
+<audio id="succees_final" src="sound/success - Sound effect Gaming (FHD)(MP3_320K).mp3"></audio> <!-- sound succees one-->
+<audio id="succees_first" src="sound/Success Sound Effect(MP3_320K).mp3"></audio> <!-- sound succees two -->
+<audio id="click" src="sound/Video Game Beep - Sound Effect(MP3_320K).mp3"></audio> <!-- sound click block -->
+<audio id="gameOverF" src="sound/Videogame Death Sound Effect HD _ No Copyright(MP3_320K).mp3"></audio> <!-- game over final sound -->
+  <script src="memoryGame.js"></script>
+</body>
+</html>
+<!-- <div class="grid">
+              
+         
+</div> -->
