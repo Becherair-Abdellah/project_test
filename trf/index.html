@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard IFRAGE</title>
+        <!-- all min css -->
+        <link rel="stylesheet" href="assets/css/all.min.css">
+           <!-- ----------------- css styling  --------------- -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- --------------- fonts from google ------------------>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>  
+    <!-- ---------- container element ------------->
+    <div class="container">
+        <div class="navbar">
+            <div class="imgAndMode">
+                <img src="assets/img/customer01.jpg" alt="">
+                <div class="mode">
+                    <ion-icon class="active" id="light" name="sunny-sharp"></ion-icon>
+                    <ion-icon  id="dark" name="moon-sharp"></ion-icon>
+                </div>
+            </div>
+            <div class="bars">
+                <ion-icon name="menu-sharp"></ion-icon>
+                <!-- <ion-icon name="grid-outline"></ion-icon> -->
+            </div>
+        </div>   <!--that navbar nex time we append in last div in this design -->
+        <aside>
+            <div class="logoClose">
+                <div class="logo">
+                    <ion-icon id="logo" name="logo-capacitor"></ion-icon>
+                    <span class="nameLogo">IFR<span class="showColor">AGE</span></span>
+                </div>
+                <ion-icon class="close" name="close-outline"></ion-icon>     
+            </div>
+            <!-- --------- side bar ------------>
+            <div class="sidebar">
+                <a class="active" href="">
+                    <ion-icon name="grid-outline"></ion-icon>
+                    <span class="text">DashBoard</span>
+                </a>
+                <a href="">
+                    <ion-icon name="person-outline"></ion-icon>
+                    <span class="text">customers</span>
+                </a>
+                <a href="">
+                    <ion-icon name="receipt-outline"></ion-icon>
+                    <span class="text">Orders</span>
+                </a>
+                <a href="">
+                    <ion-icon name="analytics-outline"></ion-icon>
+                    <span class="text">Analytics</span>
+                </a>   
+                <a href="">
+                    <ion-icon name="chatbox-outline"></ion-icon>
+                    <span class="text">Messages</span>
+                    <span class="text-count">26</span>
+                </a>  
+                <a href="">
+                    <ion-icon name="pricetags-outline"></ion-icon>
+                    <span class="text">Products</span>
+                </a>
+                <a href="">
+                    <ion-icon name="alert-outline"></ion-icon>
+                    <span class="text">Reports</span>
+                </a>
+                <a href="">
+                    <ion-icon name="cog-outline"></ion-icon>
+                    <span class="text">Settings</span>
+                </a>
+                <a href="">
+                    <ion-icon name="add-outline"></ion-icon>
+                    <span class="text">Add Product</span>
+                </a>
+                
+                <a href="">
+                    <ion-icon name="log-out-outline"></ion-icon>
+                    <span class="text">Log out</span>
+                </a>
+            </div>
+        </aside>
+        <header>
+            <!-- ------- div Top -----------/ -->
+            <div class="top">
+                <h1>DashBoard</h1>
+                <div class="date">
+                    <input type="date" name="" id="timeAndDate">
+                </div>
+            </div>
+            <!-- ------------ div sales ------------------/ -->
+            <div class="sales">
+                <div class="sale">
+                    <div class="infoSale">
+                        <ion-icon name="analytics-outline"></ion-icon>
+                        <h3>Total Sales</h3>
+                        <h1 id="currency">$ <span>25,024</span></h1>
+                        <div class="text-time">last 24 Hours</div>
+                    </div>
+                    <svg>
+                        <circle cx="39" cy="39" r="39"></circle>
+                    </svg>
+                    <div class="percent"><span id="percentOne">82</span>%</div>
+                </div>
+                <div class="expen">
+                    <div class="infoSale">
+                        <ion-icon name="podium-outline"></ion-icon>
+                        <h3>Total Expenses</h3>
+                        <h1 id="currency">$<span>14,160</span></h1>
+                        <div class="text-time">last 24 Hours</div>
+                    </div>
+                    <svg>
+                        <circle cx="39" cy="39" r="39"></circle>
+                    </svg>
+                    <div class="percent"><span id="percentTwo">62</span>%</div>
+                </div>
+                <div class="incom">
+                    <div class="infoSale">
+                        <ion-icon name="analytics-outline"></ion-icon>
+                        <h3>Total Income</h3>
+                        <h1 id="currency">$<span>10,864</span></h1>
+                        <div class="text-time">last 24 Hours</div>
+                    </div>
+                    <svg>
+                        <circle cx="39" cy="39" r="39"></circle>
+                    </svg>
+                    <div class="percent"><span id="percentThree">72</span>%</div>
+                </div>
+            </div>
+            <!-- ----------- div recent Orders ---------------/ -->
+            <div class="recentOrders">
+                <h1>Recent Orders</h1>
+                <li>
+                    <span class="productName">productName</span>
+                    <span class="productNumber">productNumber</span>
+                    <span class="payment">payment</span>
+                    <span class="status">Status</span>
+                    <span class="details">details</span>
+                </li>
+
+                <li>
+                    <span class="productName">productName</span>
+                    <span class="productNumber">34835353</span>
+                    <span class="payment">paid</span>
+                    <span class="status">Delivered</span>
+                    <span class="details">details</span>
+                </li>
+
+                <li>
+                    <span class="productName">productName</span>
+                    <span class="productNumber">34835353</span>
+                    <span class="payment">paid</span>
+                    <span class="status">Pending</span>
+                    <span class="details">details</span>
+                </li>
+
+                <li>
+                    <span class="productName">productName</span>
+                    <span class="productNumber">34835353</span>
+                    <span class="payment">paid</span>
+                    <span class="status">Declined</span>
+                    <span class="details">details</span>
+                </li>
+
+                <li>
+                    <span class="productName">productName</span>
+                    <span class="productNumber">34835353</span>
+                    <span class="payment">paid</span>
+                    <span class="status">Delivered</span>
+                    <span class="details">details</span>
+                </li>
+
+                <li>
+                    <span class="productName">productName</span>
+                    <span class="productNumber">34835353</span>
+                    <span class="payment">paid</span>
+                    <span class="status">Pending</span>
+                    <span class="details">details</span>
+                </li>
+
+                <li>
+                    <span class="productName">productName</span>
+                    <span class="productNumber">34835353</span>
+                    <span class="payment">paid</span>
+                    <span class="status">Delivered</span>
+                    <span class="details">details</span>
+                </li>
+
+                <li>
+                    <span class="productName">productName</span>
+                    <span class="productNumber">34835353</span>
+                    <span class="payment">paid</span>
+                    <span class="status">Declined</span>
+                    <span class="details">details</span>
+                </li>
+                <h6>Show All</h6>
+            </div>
+        </header>
+
+        <!-- ----------- footer div ---------- -->
+        <div class="footer">
+            <!-- div admin -->
+            <div class="recentUpdates">
+                <h2>Recent Updates</h2>
+                <div class="Updates">
+                    <li>
+                        <img src="assets/img/customer02.jpg" alt="">
+                        <div class="text">
+                            <span class="name">Mike Tyson</span> received his order of Night lion tech GPS drone
+                            <div class="timeAgo"><span class="numberTime">2</span> Minutes Ago</div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <img src="assets/img/customer02.jpg" alt="">
+                        <div class="text">
+                            <span class="name">Mike Tyson</span> received his order of Night lion tech GPS drone
+                            <div class="timeAgo"><span class="numberTime">6</span> Minutes Ago</div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <img src="assets/img/customer01.jpg" alt="">
+                        <div class="text">
+                            <span class="name">Abdellah</span> received his order of Night lion tech GPS drone
+                            <div class="timeAgo"><span class="numberTime">8</span> Minutes Ago</div>
+                        </div>
+                    </li>
+                </div>
+            </div>
+            <div class="salesAnalytics">
+                <h2>Recent Updates</h2>
+                <li>
+                    <ion-icon id="logo" name="logo-capacitor"></ion-icon>
+                    <span class="text">
+                        ONLINE ORDERS
+                        <span class="time">last <span class="number">24</span> Hours </span>
+                    </span>
+                    <span class="percent">+<span id="number">39</span>%</span>
+                    <span id="NumberLast" >3849</span>
+                </li>
+
+                <li>
+                    <ion-icon name="receipt-outline"></ion-icon>
+                    <span class="text">
+                        OFFLINE ORDERS
+                        <span class="time">last <span class="number">24</span> Hours </span>
+                    </span>
+                    <span class="percent">-<span id="number">17</span>%</span>
+                    <span id="NumberLast" >3849</span>
+                </li>
+
+                <li>
+                    <ion-icon name="alert-outline"></ion-icon>
+                    <span class="text">
+                        NEW CUSTOMER
+                        <span class="time">last <span class="number">24</span> Hours </span>
+                    </span>
+                    <span class="percent">+<span id="number">39</span>%</span>
+                    <span id="NumberLast" >3849</span>
+                </li>
+
+                <li>
+                    + Add Product
+                </li>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- ------------------ icons from library ionicons ----------------- -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <!-- ------------------ script ----------------- -->
+    <script src="assets/js/index.js"></script>
+</body>
+</html>
