@@ -1,0 +1,543 @@
+/* font from google fonts  */
+
+/* color var */
+:root {
+    --black: #272d3b;
+    --red: #ed176f;
+    --coral: #f7817f;
+    --gradient: linear-gradient(90deg, var(--red), var(--coral));
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 70%;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    transition: all .3s;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    list-style: none;
+}
+
+.heading {
+    background: var(--gradient);
+    background-repeat: no-repeat;
+    font-size: 5.5rem;
+    width: fit-content;
+    margin: 0 auto;
+    position: relative;
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+.heading.animate::before {
+    width: 0%;
+    translate: 100% 0;
+}
+
+*::selection {
+    color: white;
+    background-color: var(--red);
+}
+
+header {
+    background: var(--black);
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 4rem;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 11;
+}
+
+.line {
+    width: 0%;
+    position: absolute;
+    background: var(--coral);
+    height: 3px;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+header a {
+    color: white;
+}
+
+header nav a:hover {
+    color: var(--coral);
+}
+
+header>a {
+    font-size: 29px;
+    color: white;
+}
+
+header>a::first-letter {
+    color: var(--coral);
+    font-size: 30px;
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+    font-size: 20px;
+    align-items: center;
+}
+
+#menu-bar {
+    display: none;
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+/* styling section */
+section {
+    padding: 10rem 4%;
+}
+
+.home {
+    background: url('../img/home-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    padding-bottom: 6rem;
+}
+
+.home .content {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.home .app-landing {
+    font-size: 6rem;
+    text-align: center;
+    color: white;
+}
+
+.home .content p {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    text-align: center;
+    line-height: 3.5rem;
+    color: white;
+    padding: 4rem;
+}
+
+.home .content a {
+    width: 40%;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 2rem;
+    padding: 1rem;
+    background: linear-gradient(45deg, var(--red), var(--coral));
+    color: white;
+    font-weight: bold;
+    border-radius: 21px;
+    margin-top: 1rem;
+}
+
+.home .content a:hover {
+    scale: 1.1;
+}
+
+.features {
+    padding: 5rem 4rem;
+}
+
+.features .box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 6rem 6%;
+}
+
+.features .box-container .box,
+.how-works .box-container .box {
+    background: rgba(237, 23, 111, .05);
+    padding: 2rem;
+    flex: 1 1 30rem;
+    border-radius: .5rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.how-works .box-container .box {
+    background: none;
+    flex: none;
+}
+
+.features .box-container .box:hover {
+    background: var(--gradient);
+}
+
+.features .box-container .box:hover>* {
+    color: white;
+}
+
+.features .box-container .box i,
+.how-works .box-container .box i {
+    font-size: 5rem;
+    color: var(--red);
+}
+
+.features .box-container .box h3,
+.how-works .box-container .box h3 {
+    font-size: 2.5rem;
+    color: var(--black);
+    margin-top: 1rem;
+}
+
+.how-works .box-container {
+    display: flex;
+    margin-top: 6rem;
+    flex-wrap: nowrap;
+}
+
+.how-works .box-container .row {
+    flex: 1 1 40rem;
+}
+
+.features .box-container .box p,
+.how-works .box-container .box p {
+    font-size: 1.5rem;
+    color: var(--black);
+    margin-top: 1rem;
+}
+
+/*section about*/
+.about {
+    padding: 0rem 6% 5rem;
+}
+
+.about .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about .content,
+.about .image {
+    flex: 1 1 40rem;
+}
+
+.about .image img {
+    width: 100%;
+}
+
+.about .content h2 {
+    font-size: 4rem;
+    margin: 3rem 0;
+    text-align: start;
+}
+
+.about .content p {
+    font-size: 1.5rem;
+    line-height: 3rem;
+    color: var(--black);
+    margin-bottom: 3rem;
+    text-align: start;
+}
+
+.about .download {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3.5rem;
+}
+
+.about .download a {
+    scale: 1.2;
+}
+
+/* usage section */
+/*reveiw section*/
+.review .box-container,
+.pricing .box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 6rem 6%;
+    gap: 2rem;
+}
+
+.review .box-container .box{
+    flex: 1 1 40rem;
+    padding: 3rem;
+    text-align: center;
+    border-radius: 1rem;
+    border: 1px solid gray;
+    box-shadow: 0 0 6px -3px var(--black);
+}
+.review .box-container .box img{
+    width: 13rem;
+    height: 13rem;
+    border-radius: 50%;
+}
+.review .box-container .box h3{
+    font-size: 2.5rem;
+    color: var(--black);
+}
+.review .box-container .box p{
+    font-size: 1.4rem;
+    color: var(--black);
+    line-height: 2.5rem;
+}
+.review .box-container .box .stars{
+    color: var(--red);
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+/* section pricing */
+.pricing .box-container .box{
+    flex: 1 1 40rem;
+}
+.pricing .box-container .box{
+    flex: 1 1 40rem;
+    text-align: center;
+    border: 1px solid #a1a1a1;
+    box-shadow: 0 0 5px -2px black;
+}
+.pricing .box-container .box a,
+.contact form button{
+    color: white;
+    font-size: 1.7rem;
+    padding: 0.7rem 3rem;
+    background: var(--gradient);
+    border-radius: 3rem;
+    display: block;
+    margin: 2rem auto;
+    width: 185px;
+    cursor: pointer;
+}
+.contact form button{
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+    margin: 0;
+}
+.pricing .box-container .box a:hover,
+.contact form button:hover{
+    scale: 1.1;
+}
+.pricing .box-container .box .coin{
+    font-size: 5rem;
+    font-weight: bold;
+    margin: 4rem;
+}
+.pricing .box-container .box .coin span{
+    font-size: 2rem;
+}
+.pricing .box-container .box h3{
+    font-size: 3rem;
+    background:var(--gradient);
+    color: white;
+    padding: 1rem;
+}
+.pricing .box-container ul{
+    line-height: 3rem;
+    padding:4rem 3%;
+    border-bottom: 1px solid var(--red);
+}
+.pricing .box-container ul li{
+    color: var(--black);
+    font-size: 1.7rem;
+}
+/* section contact  */
+.contact{
+    background: linear-gradient(#fff 50%, var(--black) 50%);
+}
+.contact form{
+    padding: 3rem;
+    background: white;
+    box-shadow: 0 1.5rem 6rem rgba(0,0,0,.1);
+}
+.contact form .my-input{
+    margin-bottom: 1rem;
+}
+.contact form .my-input label{
+    font-size: 1.7rem;
+    position: absolute;
+    top: 8px;
+    left: 0;
+}
+.contact form .my-input input{
+    height: 4rem;
+    width: 100%;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #d6d6d6;
+    margin-bottom: 3rem;
+}
+.contact form .my-input textarea{
+    border-bottom: 2px solid #d6d6d6;
+    font-size: 1.5rem;
+}
+.contact form .my-input textarea:focus,
+.contact form .my-input input:focus{
+    border-bottom: 2px solid var(--red);
+}
+.contact form .my-input textarea:focus ~label,
+.contact form .my-input input:focus ~label,
+.contact form .my-input textarea:valid ~label,
+.contact form .my-input input:valid ~label{
+    font-size: 1.5rem;
+    top: -25px;
+    color: var(--red);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+  }
+.contact form .my-input{
+    /* padding: 1rem;
+     */
+     font-size: 1.6rem;
+     position: relative;
+}
+.contact form textarea{
+    width: 100%;
+    resize: none;
+}
+/* footer section */
+.footer{
+    background: var(--black);
+    text-align: center;
+    padding: 3rem 6%;
+}
+.footer .social-media{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+.footer .social-media a{
+    color: white;
+    font-size: 2.7rem;
+    width: 4rem;
+    padding: 0.9rem;
+    border-radius: 0.5rem;
+}
+.footer .copyright span{
+    color: var(--coral);
+}
+.footer .social-media a:hover{
+    background:var(--gradient)
+}
+.footer .copyright{
+    color: white;
+    font-size: 1.7rem;
+
+}
+/* medai queryies */
+@media (max-width:991px) {
+
+    header {
+        padding: 1.5rem 2rem;
+    }
+
+    .home .content {
+        width: 100%;
+        margin: 0px auto;
+    }
+
+    .how-works .box-container {
+        flex-wrap: wrap;
+    }
+
+    .how-works .box-container .devider {
+        display: none;
+    }
+}
+
+@media (max-width:768px) {
+    html {
+        font-size: 70%;
+    }
+
+    #menu-bar {
+        display: flex;
+        align-items: center;
+    }
+
+    header {
+        margin-bottom: 3rem;
+    }
+
+    header nav {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        background: var(--black);
+        padding: 2rem 5rem;
+        display: block;
+        border-top: 1px solid #3b3b3b;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+    }
+
+    header nav.nav-path {
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+    }
+
+    header nav a {
+        padding: 1rem;
+        text-align: center;
+        background: var(--gradient);
+        border-radius: 5px;
+        margin: 1rem 0;
+        display: block;
+    }
+
+    header nav a:hover {
+        color: var(--black);
+    }
+
+    .fa-times {
+        rotate: 180deg;
+    }
+
+    .swiper {
+        width: 86% !important;
+    }
+
+    .features .box-container {
+        padding: 6rem 0;
+    }
+
+    .about .content h2,
+    .about .content p,
+    .about .content .download {
+        text-align: center !important;
+        justify-content: center;
+    }
+    .heading {
+        font-size: 4.5rem;
+    }
+}
+
+@media (max-width:525px) {
+}
